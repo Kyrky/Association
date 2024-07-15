@@ -1,174 +1,318 @@
-    @font-face {
-        font-family: 'Comfortaa';
-        src: url('../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf') format('truetype');
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #1e5072;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(20, 53, 82);
+    z-index: 100;
+}
+
+nav a {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 8px 25px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav a:hover,
+section#Home:hover~nav a[href="#Home"],
+section#AboutUs:hover~nav a[href="#AboutUs"],
+section#Membership:hover~nav a[href="#Membership"],
+section#Contacts:hover~nav a[href="#Contacts"],
+section#FAQ:hover~nav a[href="#FAQ"],
+section#Shop:hover~nav a[href="#Shop"] {
+    background: #A8E9F1;
+    color: #0E3E44;
+}
+
+nav a:active {
+    background: #94FAB3;
+}
+
+.footer {
+    margin-top: auto; 
+    text-align: center;
+    background-color: darkslategray;
+    color: white;
+    padding: 20px 0; 
+}
+
+.section-title {
+    background: #1e5072;
+    color: #fff;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.text-title {
+    font-size: 30px;
+    text-align: center;  
+    font-weight: bold;
+}
+
+.text-aboutUs {
+    text-align: center;  
+    font-size: 20px;
+}
+
+.text-Home {
+    text-align: center;  
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.block {
+    width: 100%;
+    color: #fff;
+    background-color: #7c9c96;
+} 
+
+.content {
+    min-height: 100vh; 
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+    padding-bottom: 100px; 
+}
+
+.contacts-list {
+    list-style-type: none; 
+    padding: 0; 
+    text-align: center;
+}
+
+.contacts-list li {
+    font-size: 25px;
+    margin-bottom: 10px; 
+    width: 100%;
+}
+
+.copyable:hover {
+    color: #1e5072;
+    cursor: pointer; 
+}
+
+.announcement-bar {
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 4));
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 10;
+}
+
+.announcement-bar p {
+    margin: 0;
+}
+
+#AboutUs {
+    display: flex;
+    flex-direction: column;
+}
+
+#Home {
+    display: flex;
+    flex-direction: column;
+}
+
+#Contacts .block {
+    display: flex;
+    flex-direction: column;
+}
+
+#Shop {
+    margin-top: 400px;
+}
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.cv-head {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    width: 325px;
+    height: auto;
+    border-radius: 20%;
+    margin-top: 50px;
+}
+
+.info {
+    background-color: rgba(255, 255, 0, 0.8);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1e5072;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.cv-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}
+
+.details {
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #A8E9F1;
+    margin-left: 10px;
+}
+
+.details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1e5072;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.details ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+@media screen and (min-width: 708px) {
+    .profile {
+        flex-direction: row;
+        align-items: flex-start;
     }
 
-    * {
-        scroll-behavior: smooth;
+    .profile img {
+        margin-right: 100px;
+        margin-bottom: 0;
     }
 
-    body {
-        margin: 0;
-        font-family: 'Comfortaa', sans-serif;
+    .cv-details {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    a {
-        text-decoration: none;
-        color: #ffffff;
+    .details {
+        flex-basis: calc(50% - 10px);
     }
+}
 
-    a:hover {
-        color: #1e5072;
-    }
-
-    section {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        justify-content: center;
-        align-items: center;
-        font-weight: 800;
+@media screen and (min-width: 901px) {
+    .cv-details {
         display: flex;
-        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
 
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        text-align: center;
-        background: rgb(20, 53, 82)
-        
+    .details {
+        flex-basis: calc(33.33% - 20px); /* Три элемента в ряд */
+        margin-bottom: 20px; /* Отступ между рядами */
     }
+}
 
-    nav a {
-        position: relative;
-        color: aliceblue;
-        text-decoration: none;
-        padding: 8px 25px;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        display: inline-block;
-    }
-
-    nav a:hover,
-    section#Home:hover~nav a[href="#Home"],
-    section#AboutUs:hover~nav a[href="#AboutUs"],
-    section#Membership:hover~nav a[href="#Membership"],
-    section#Contacts:hover~nav a[href="#Contacts"],
-    section#FAQ:hover~nav a[href="#FAQ"],
-    section#Shop:hover~nav a[href="#Shop"] {
-        background: #A8E9F1;
-        color: #0E3E44;
-    }
-
-    nav a:active {
-        background: #94FAB3;
-    }
-
-    .footer {
-        margin-top: auto; 
-        text-align: center;
-        background-color: darkslategray;
-        color: white;
-        padding: 20px 0; 
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 12px; /* Уменьшение общего размера текста */
     }
 
     .section-title {
-        background: #1e5072;
-        color: #fff;
-        padding-top:10px;
-        padding-bottom: 10px;
-        width: 100%;
-        text-align: center;
-        font-size: 2em;
+        font-size: 1.5em; /* Уменьшение размера заголовков секций */
     }
 
     .text-title {
-        font-size: 30px;
-        text-align: center;  
-        font-weight: bold;
+        font-size: 24px; /* Уменьшение размера заголовков текста */
     }
 
-    .text-aboutUs {
-        text-align: center;  
-        font-size: 20px;
+    .text-aboutUs,
+    .info p,
+    .details ul li {
+        font-size: 14px; /* Уменьшение размера текста */
     }
 
-    .text-Home {
-        text-align: center;  
-        font-size: 20px;
+    .profile img {
+        width: 215px; /* Уменьшение размера изображения */
+        margin-bottom: 77px;
     }
-
-    .block {
-        width: 100%;
-        color: #fff;
-        background-color: #7c9c96;
+}
+@media screen and (max-width: 999px) {
+    nav {
+        display: none; /* Скрыть меню */
     }
-
-    .section-grid {
-        border: none;
-        height: 3px; 
-        background-color: rgb(0, 0, 0); 
-        margin: 20px 0;
-    }
-    .content {
-        min-height: 100vh; 
-        position: relative;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        z-index: 2;
-        padding-bottom: 400px;
-    }
-    .contacts-list {
-        list-style-type: none; 
-        padding: 0; 
-        text-align: center;
-    }
-
-    .contacts-list li {
-        font-size: 25px;
-        margin-bottom: 10px; 
-        width: 100%;
-    }
-
-    .copyable:hover {
-        color: #1e5072;
-        cursor: pointer; 
-    }
-
-    .announcement-bar {
-        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 4));
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 1.2em;
-        position: relative;
-        z-index: 10;
-    }
-
-    .announcement-bar p{
-        margin: 0
-    }
-
-    #AboutUs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #Home {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #Contacts .block{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #Shop {
-        margin-top: 400px;
-    }
+}
 
 
 
