@@ -312,6 +312,9 @@ nav a:active {
     nav {
         display: none; /* Скрыть меню */
     }
+    .announcement-bar {
+        display: none; /* Скрыть интро */
+    }
 }
 
 
