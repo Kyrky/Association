@@ -249,6 +249,28 @@ nav a:active {
     color: #555;
 }
 
+.details-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.details-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.details-block.show {
+    max-height: 500px; /* Увеличить это значение, если необходимо для более длинных списков */
+    transition: max-height 0.5s ease-in;
+}
+
+.details-toggle {
+    cursor: pointer;
+}
+
+
 @media screen and (min-width: 708px) {
     .profile {
         flex-direction: row;

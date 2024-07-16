@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .contacts-list a {
+            background-color: rgb(126, 201, 245);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .block {
+            text-align: center;
+        }
+        .cv .details-toggle {
+            color: #003366; /* Темный синий цвет */
+        }
+    </style>
     <title>Міжнародна Асоціація Кінезіології та Остеопатії</title>
 </head>
 <body>
@@ -55,7 +69,7 @@
                     </div>
                     <div class="cv-details">
                         <div class="details">
-                            <h3>Остеопатичне навчання:</h3>
+                            <h3 class="details-toggle">Остеопатичне навчання:</h3>
                             <ul class="details-block">
                                 <li>Французька школа остеопатії Alex Budnik (викладач Британської школи остеопатії): курс класичної остеопатії (72 години).</li>
                                 <li>Авторська школа Юрія Шишмакова: курс біокінетики та біодинаміки (192 години).</li>
@@ -64,7 +78,7 @@
                             </ul>
                         </div>
                         <div class="details">
-                            <h3>Кінезіологічне навчання:</h3>
+                            <h3 class="details-toggle">Кінезіологічне навчання:</h3>
                             <ul class="details-block">
                                 <li>Авторська школа Григорія Крутова (понад 300 годин).</li>
                                 <li>Навчання в Асоціації прикладної кінезіології Дмитро Кущик (понад 120 годин).</li>
@@ -74,7 +88,7 @@
                             </ul>
                         </div>
                         <div class="details">
-                            <h3>Психологічне навчання:</h3>
+                            <h3 class="details-toggle">Психологічне навчання:</h3>
                             <ul class="details-block">
                                 <li>Юнгіанський аналіз в «Інститут сімейної психології та консультування» (110 годин).</li>
                                 <li>Основи аналітичної психології та Юнгіанський аналіз у «International institute of psychology» (8 годин).</li>
@@ -84,6 +98,8 @@
                         </div>
                     </div>
                 </div>
+                
+                
 
    
             </section>
@@ -98,7 +114,6 @@
                     <ul class="contacts-list">
                         <li>Телефон: <span class="copyable" data-copiable="+380951935984">+380951935984</span></li>
                         <li>Пошта: <span class="copyable" data-copiable="semenaroon@gmail.com">semenaroon@gmail.com</span></li>
-                        <li><a href="html/contacts-terapefts.html">Контакти терапевтів</a></li>
                         <li><a href="https://t.me/IAKOfriends"><i class="fab fa-telegram"></i> Telegram</a></li>
                         <li><a href="https://www.instagram.com/applied_kinesiology_kiev/"><i class="fab fa-instagram"></i> Instagram</a></li>
                         <li><a href="https://www.facebook.com/AppliedKinesio"><i class="fab fa-facebook"></i> Facebook</a></li>
@@ -106,6 +121,15 @@
                 </div>  
             </section>
 
+            <section id="TableLink">
+                <h1 class="section-title">Контакти терапевтів</h1>
+                <div class="block">
+                    <p>Тут ви можете знайти необхідного терапевта, зробивши сортування по місту, яке вас цікавить.</p>
+                    <ul class="contacts-list">
+                        <li><a href="html/contacts-terapefts.html">Контакти терапевтів</a></li>
+                    </ul>
+                </div>
+            </section>
             <section id="FAQ">
                 <h1 class="section-title">Часті запитання</h1>
             </section>
@@ -118,6 +142,7 @@
                 <a href="#Home">Головна</a>
                 <a href="#AboutUs">Про нас</a>
                 <a href="#Membership">Членство в Асоціації</a>
+                <a href="#TableLink">Контакти терапевтів</a>
                 <a href="#Contacts">Контакти</a>
                 <a href="#FAQ">Часті запитання</a>
                 <a href="#Shop">Магазин</a>   
@@ -131,5 +156,6 @@
     <script src="js/intro.js"></script>
     <script src="js/copy.js"></script>
     <script src="js/adaptive.js"></script>
+    <script src="js/cv.js"></script>
 </body>
 </html>
