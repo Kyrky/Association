@@ -1,97 +1,11 @@
-/* Стили для блока CV */
 .cv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    padding: 0 20px;
-}
-.cv .details-toggle {
-    color: #003366; 
-}
-.cv-head {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 50px;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile img {
-    width: 325px;
-    height: auto;
-    border-radius: 20%;
-    margin-top: 50px;
-}
-
-.info {
-    background-color: rgba(255, 255, 0, 0.8);
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #1e5072;
-}
-
-.info p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.cv-details {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
-}
-
-.details {
-    margin-bottom: 20px;
-    padding: 20px;
-    text-align: left;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #A8E9F1;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.details h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #1e5072;
-}
-
-.details ul {
-    list-style-type: none;
-    padding: 0;
-
-}
-
-.details ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.cv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    padding: 0 20px;
+    margin: 30px auto; /* Центрирование и отступ сверху и снизу */
+    padding: 0 20px; /* Внутренние отступы для блоков */
+    width: 100%; /* Полная ширина блока */
+    box-sizing: border-box; /* Учитываем внутренние отступы и границы в общей ширине */
 }
 
 .cv-head {
@@ -104,13 +18,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .profile img {
-    width: 365px;
+    width: 100%;
+    max-width: 365px;
     height: auto;
     border-radius: 10%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .info {
@@ -119,20 +35,26 @@
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 800px;
     margin-bottom: 20px;
-    margin-left: 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
 }
 
 .info h2 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #1e5072;
+    white-space: normal; /* Текст переносится */
+    overflow: visible; /* Лишний текст видим */
+    text-overflow: clip; /* Без многоточия */
 }
 
 .info p {
-    font-size: 15px;
+    font-size: 18px; /* Увеличен размер шрифта */
     line-height: 1.6;
     color: #1e5072;
+    word-wrap: break-word; /* Перенос длинных слов */
 }
 
 .cv-details {
@@ -146,11 +68,11 @@
     margin-bottom: 20px;
     padding: 20px;
     text-align: left;
-    background-color: #f0f0f0;
+    background-color: #A8E9F1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #A8E9F1;
-    margin-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .details h3 {
@@ -162,19 +84,12 @@
 .details ul {
     list-style-type: none;
     padding: 0;
-
 }
 
 .details ul li {
     font-size: 16px;
     margin-bottom: 10px;
     color: #555;
-}
-
-.details-block {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
 }
 
 .details-block {
@@ -190,40 +105,40 @@
 
 .details-toggle {
     cursor: pointer;
+    color: #003366; 
 }
 
-
-@media screen and (min-width: 708px) {
-    .profile {
-        flex-direction: row;
-        align-items: flex-start;
+/* Адаптивность для экранов до 1000px */
+@media screen and (max-width: 1000px) {
+    .info h2 {
+        font-size: 26px; /* Увеличиваем размер шрифта заголовков */
     }
 
-    .profile img {
-        margin-right: 100px;
-        margin-bottom: 0;
+    .info p {
+        font-size: 20px; /* Увеличиваем размер шрифта параграфов */
     }
 
-    .cv-details {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .details h3 {
+        font-size: 22px; /* Увеличиваем размер шрифта заголовков в деталях */
     }
 
-    .details {
-        flex-basis: calc(50% - 10px);
+    .details ul li {
+        font-size: 18px; /* Увеличиваем размер шрифта элементов списка */
     }
 }
 
-@media screen and (min-width: 901px) {
-    .cv-details {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+/* Адаптивность для экранов до 708px */
+@media screen and (max-width: 708px) {
+
+    .info {
+        padding: 20px;
     }
 
-    .details {
-        flex-basis: calc(33.33% - 20px); /* Три элемента в ряд */
-        margin-bottom: 20px; /* Отступ между рядами */
+    .info h2 {
+        font-size: 28px; /* Увеличиваем размер шрифта заголовков */
+    }
+
+    .info p {
+        font-size: 22px; 
     }
 }
