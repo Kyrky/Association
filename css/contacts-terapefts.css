@@ -104,3 +104,108 @@ a {
         margin-top: 20px; /* Увеличим отступ сверху для поисковой строки */
     }
 }
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px auto; /* Уменьшение отступа от таблички */
+    max-width: 100%; /* Таблица будет занимать всю доступную ширину */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-scrollable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow-y: auto;
+    max-height: 400px; /* Высота таблицы для прокрутки */
+}
+
+.table-scrollable th, .table-scrollable td {
+    padding: 10px; /* Уменьшение отступов в ячейках */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.table-scrollable th {
+    background-color: rgb(22, 28, 59);
+    color: white;
+    padding: 10px; /* Уменьшение отступов в заголовках */
+}
+
+.table-scrollable tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-scrollable a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Стили для поисковой строки */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 50px; /* Отступ от верхней границы, начиная с меню */
+    z-index: 100;
+    background-color: #fff; /* Чтобы поиск не сливался с таблицей */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .contacts-list li {
+        font-size: 16px; /* Уменьшение размера текста контактов */
+    }
+
+    .section-title {
+        font-size: 1.5em; /* Уменьшение размера заголовка секции */
+    }
+
+    table {
+        width: 100%; /* Ширина таблицы занимает 100% ширины экрана */
+        overflow-x: auto; /* Горизонтальная прокрутка при необходимости */
+    }
+
+    th, td {
+        white-space: nowrap; /* Предотвращение переноса содержимого ячеек */
+    }
+
+    .search-container {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-input {
+        padding: 10px;
+        width: 80%; /* Ширина поискового поля */
+        font-size: 16px;
+        margin-bottom: 10px; /* Отступ снизу для поисковой строки */
+    }
+
+    .search-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .table-container {
+        margin-top: 20px; /* Увеличим отступ сверху для поисковой строки */
+    }
+}

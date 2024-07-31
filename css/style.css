@@ -112,7 +112,6 @@ nav a:active {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 2;
-    padding-bottom: 100px; 
 }
 
 .contacts-list {
@@ -176,6 +175,41 @@ nav a:active {
     padding: 2rem 0;
 }
 
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #ccc;
+}
+
+
 @media screen and (max-width: 750px) {
     body {
         font-size: 12px; /* Уменьшение общего размера текста */
@@ -209,6 +243,13 @@ nav a:active {
         display: none;
     }
 }
+
+@media screen and (min-width: 1001px){
+    #Home{
+        margin-top: 100px;
+    }
+}
+
 
 /* Стили для модальных окон */
 .modal {

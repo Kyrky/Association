@@ -1,25 +1,21 @@
+// Префиксный поиск по названиям городов
 function filterTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    table = document.querySelector(".table-scrollable");
-    tr = table.getElementsByTagName("tr");
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const table = document.querySelector('.table-scrollable');
+    const rows = table.querySelectorAll('tbody tr');
 
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0]; // Ищем только по первой колонке
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
+    rows.forEach(row => {
+        const city = row.querySelector('td:last-child').textContent.toLowerCase();
+        // Проверка, начинается ли название города с введенного префикса
+        if (city.startsWith(input)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
         }
-    }
+    });
 }
 
 function clearSearch() {
-    var input = document.getElementById("searchInput");
-    input.value = "";
-    filterTable(); // Обновляем таблицу после очистки поискового поля
+    document.getElementById('searchInput').value = '';
+    filterTable();
 }

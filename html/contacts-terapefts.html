@@ -6,114 +6,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/item.css">
     <link rel="stylesheet" href="../css/contacts-terapefts.css"> <!-- Подключение отдельного CSS файла для этой страницы -->
-    <style>
-        /* Общие стили для таблицы */
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-            margin: 20px auto; /* Уменьшение отступа от таблички */
-            max-width: 100%; /* Таблица будет занимать всю доступную ширину */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .table-scrollable {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            overflow-y: auto;
-            max-height: 400px; /* Высота таблицы для прокрутки */
-        }
-
-        .table-scrollable th, .table-scrollable td {
-            padding: 10px; /* Уменьшение отступов в ячейках */
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            font-size: 16px;
-        }
-
-        .table-scrollable th {
-            background-color: rgb(22, 28, 59);
-            color: white;
-            padding: 10px; /* Уменьшение отступов в заголовках */
-        }
-
-        .table-scrollable tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        .table-scrollable a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        /* Стили для поисковой строки */
-        .search-container {
-            text-align: center;
-            margin-bottom: 20px;
-            position: sticky;
-            top: 50px; /* Отступ от верхней границы, начиная с меню */
-            z-index: 100;
-            background-color: #fff; /* Чтобы поиск не сливался с таблицей */
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-input {
-            padding: 10px;
-            width: 60%;
-            font-size: 16px;
-        }
-
-        .search-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width: 750px) {
-            .contacts-list li {
-                font-size: 16px; /* Уменьшение размера текста контактов */
-            }
-
-            .section-title {
-                font-size: 1.5em; /* Уменьшение размера заголовка секции */
-            }
-
-            table {
-                width: 100%; /* Ширина таблицы занимает 100% ширины экрана */
-                overflow-x: auto; /* Горизонтальная прокрутка при необходимости */
-            }
-
-            th, td {
-                white-space: nowrap; /* Предотвращение переноса содержимого ячеек */
-            }
-
-            .search-container {
-                text-align: center;
-                margin-bottom: 20px;
-                padding: 10px 0;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-
-            .search-input {
-                padding: 10px;
-                width: 80%; /* Ширина поискового поля */
-                font-size: 16px;
-                margin-bottom: 10px; /* Отступ снизу для поисковой строки */
-            }
-
-            .search-button {
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-
-            .table-container {
-                margin-top: 20px; /* Увеличим отступ сверху для поисковой строки */
-            }
-        }
-    </style>
     <script src="../js/contacts-terapefts.js"></script> <!-- Подключение JS файла -->
     <title>Контакти терапевтів</title>
 </head>
@@ -128,7 +20,7 @@
     </nav>
 
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Пошук..." oninput="filterTable()">
+        <input type="text" id="searchInput" class="search-input" placeholder="Ви можете знайти потрібного терапевта, шукаючи по вашому місту..." oninput="filterTable()">
         <button onclick="clearSearch()" class="search-button">Очистити</button>
     </div>
 
@@ -140,137 +32,161 @@
                     <th>Телефон</th>
                     <th>Пошта</th>
                     <th>Соціальні мережі</th>
+                    <th>Місто</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Іван Іванов Іванович</td>
+                    <td>Іван Іванович Іванюк</td>
                     <td>+380123456</td>
-                    <td>Ivan_Ivanov@gmail.com</td>
+                    <td>Ivan_Ivanuk@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">Telegram</a></td>
+                    <td>Київ</td>
                 </tr>
                 <tr>
                     <td>Олексій Глушков Олексійович</td>
                     <td>+380654321</td>
                     <td>Alex_Glushkov@gmail.com</td>
                     <td><a href="#">Instagram | </a><a href="#">Telegram</a></td>
+                    <td>Львів</td>
                 </tr>
                 <tr>
-                    <td>Марія Петрівна Володимирівна</td>
+                    <td>Марія Петрівна Володимиренко</td>
                     <td>+380987654</td>
-                    <td>Maria_Petrova@gmail.com</td>
+                    <td>Maria_Petrenko@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">Instagram</a></td>
+                    <td>Одеса</td>
                 </tr>
                 <tr>
-                    <td>Павло Сидорович Кузнецов</td>
+                    <td>Павло Сидорович Кузьмук</td>
                     <td>+380246810</td>
-                    <td>Pavel_Kuznetsov@gmail.com</td>
+                    <td>Pavlo_Kuzmuk@gmail.com</td>
                     <td><a href="#">Twitter | </a><a href="#">LinkedIn</a></td>
+                    <td>Харків</td>
                 </tr>
                 <tr>
                     <td>Олена Сергіївна Нікітіна</td>
                     <td>+380135792</td>
                     <td>Elena_Nikitina@gmail.com</td>
                     <td><a href="#">VK | </a><a href="#">Telegram</a></td>
+                    <td>Дніпро</td>
                 </tr>
                 <tr>
-                    <td>Дмитро Васильович Смірнов</td>
+                    <td>Дмитро Васильович Коваленко</td>
                     <td>+3803691215</td>
-                    <td>Dmitry_Smirnov@gmail.com</td>
+                    <td>Dmytro_Kovalenko@gmail.com</td>
                     <td><a href="#">Instagram | </a><a href="#">WhatsApp</a></td>
+                    <td>Запоріжжя</td>
                 </tr>
                 <tr>
-                    <td>Ольга Ігорівна Ковалева</td>
+                    <td>Ольга Ігорівна Лук'яненко</td>
                     <td>+380112233</td>
-                    <td>Olga_Kovaleva@gmail.com</td>
+                    <td>Olga_Lukyanenko@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">LinkedIn</a></td>
+                    <td>Вінниця</td>
                 </tr>
                 <tr>
-                    <td>Андрій Павлович Морозов</td>
+                    <td>Андрій Павлович Ромашко</td>
                     <td>+380445566</td>
-                    <td>Andrey_Morozov@gmail.com</td>
+                    <td>Andriy_Romashko@gmail.com</td>
                     <td><a href="#">Telegram | </a><a href="#">WhatsApp</a></td>
+                    <td>Полтава</td>
                 </tr>
                 <tr>
-                    <td>Світлана Володимирівна Васильєва</td>
+                    <td>Світлана Володимирівна Васильченко</td>
                     <td>+380778899</td>
-                    <td>Svetlana_Vasilieva@gmail.com</td>
+                    <td>Svetlana_Vasylchuk@gmail.com</td>
                     <td><a href="#">VK | </a><a href="#">Instagram</a></td>
+                    <td>Черкаси</td>
                 </tr>
                 <tr>
-                    <td>Микита Ігорович Казаков</td>
+                    <td>Микита Ігорович Сіренко</td>
                     <td>+380998877</td>
-                    <td>Nikita_Kazakov@gmail.com</td>
+                    <td>Nikita_Sirenko@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">Twitter</a></td>
+                    <td>Рівне</td>
                 </tr>
                 <tr>
-                    <td>Катерина Олексіївна Лебедєва</td>
+                    <td>Катерина Олексіївна Яценко</td>
                     <td>+380667788</td>
-                    <td>Katerina_Lebedeva@gmail.com</td>
+                    <td>Katerina_Yatsenko@gmail.com</td>
                     <td><a href="#">Instagram | </a><a href="#">Telegram</a></td>
+                    <td>Суми</td>
                 </tr>
                 <tr>
-                    <td>Роман Володимирович Ткаченко</td>
+                    <td>Роман Володимирович Мельник</td>
                     <td>+380112233</td>
-                    <td>Roman_Tkachenko@gmail.com</td>
+                    <td>Roman_Melnyk@gmail.com</td>
                     <td><a href="#">LinkedIn | </a><a href="#">Telegram</a></td>
+                    <td>Чернівці</td>
                 </tr>
                 <tr>
-                    <td>Ірина Петрівна Сидорова</td>
+                    <td>Ірина Петрівна Гриценко</td>
                     <td>+380445566</td>
-                    <td>Irina_Sidorova@gmail.com</td>
+                    <td>Irina_Hrytsenko@gmail.com</td>
                     <td><a href="#">VK | </a><a href="#">Instagram</a></td>
+                    <td>Кам'янець-Подільський</td>
                 </tr>
                 <tr>
-                    <td>Олександр Сергійович Новіков</td>
+                    <td>Олександр Сергійович Кравчук</td>
                     <td>+380998877</td>
-                    <td>Alexander_Novikov@gmail.com</td>
+                    <td>Alexander_Kravchuk@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">WhatsApp</a></td>
+                    <td>Івано-Франківськ</td>
                 </tr>
                 <tr>
-                    <td>Валентина Василівна Кузнєцова</td>
+                    <td>Валентина Василівна Бойко</td>
                     <td>+380667788</td>
-                    <td>Valentina_Kuznetsova@gmail.com</td>
+                    <td>Valentina_Boyko@gmail.com</td>
                     <td><a href="#">Instagram | </a><a href="#">LinkedIn</a></td>
+                    <td>Тернопіль</td>
                 </tr>
                 <tr>
-                    <td>Денис Олександрович Попов</td>
+                    <td>Денис Олександрович Левченко</td>
                     <td>+380112233</td>
-                    <td>Denis_Popov@gmail.com</td>
+                    <td>Denis_Levchenko@gmail.com</td>
                     <td><a href="#">Twitter | </a><a href="#">Telegram</a></td>
+                    <td>Луцьк</td>
                 </tr>
                 <tr>
-                    <td>Анастасія Вікторівна Соколова</td>
+                    <td>Анастасія Вікторівна Кучер</td>
                     <td>+380445566</td>
-                    <td>Anastasia_Sokolova@gmail.com</td>
+                    <td>Anastasia_Kucher@gmail.com</td>
                     <td><a href="#">VK | </a><a href="#">Instagram</a></td>
+                    <td>Мелітополь</td>
                 </tr>
                 <tr>
-                    <td>Максим Дмитрієвич Воробйов</td>
+                    <td>Максим Дмитрієвич Ковальчук</td>
                     <td>+380998877</td>
-                    <td>Maxim_Vorobyov@gmail.com</td>
+                    <td>Maxim_Kovalchuk@gmail.com</td>
                     <td><a href="#">Facebook | </a><a href="#">WhatsApp</a></td>
+                    <td>Хмельницький</td>
                 </tr>
                 <tr>
-                    <td>Тетяна Олегівна Миронова</td>
+                    <td>Тетяна Олегівна Гнатюк</td>
                     <td>+380667788</td>
-                    <td>Tatiana_Mironova@gmail.com</td>
+                    <td>Tatiana_Hnatyuk@gmail.com</td>
                     <td><a href="#">Instagram | </a><a href="#">LinkedIn</a></td>
+                    <td>Житомир</td>
                 </tr>
                 <tr>
-                    <td>Сергій Андрійович Лебедєв</td>
+                    <td>Сергій Андрійович Мартинюк</td>
                     <td>+380112233</td>
-                    <td>Sergey_Lebedev@gmail.com</td>
+                    <td>Sergey_Martyniuk@gmail.com</td>
                     <td><a href="#">Twitter | </a><a href="#">Telegram</a></td>
+                    <td>Бердянськ</td>
                 </tr>
-                
-                <!-- Добавьте другие строки таблицы здесь -->
             </tbody>
         </table>
     </div>
+    
 
-    <footer class="footer">
-        <p>© 2024 Ассоціація ІАКО Всі права захищені.</p>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Міжнародна Асоціація Кінезіології та Остеопатії. Всі права захищені.</p>
+            <p>Зв'яжіться з нами: <a href="../index.html#Contacts">Контакти</a></p>
+        </div>
     </footer>
+
 </body>
 </html>
