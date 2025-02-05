@@ -73,9 +73,11 @@ nav a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #324252, rgba(206, 206, 166, 0.3)),
+    background: linear-gradient(45deg, #607a6691, rgba(206, 206, 166, 0.3)),
                 url('../img/bg.png') center/cover;
     text-align: center;
+    background-size: 100%;
+    background-position: -50% center;
 }
 
 .underhero {
