@@ -30,7 +30,7 @@
 }
 
 .info {
-    background-color: rgba(35, 202, 224, 0.3);
+    background: linear-gradient(to bottom right, #90EE90, #2912946e);
     padding: 30px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,6 +40,8 @@
     box-sizing: border-box;
     margin-top: 30px;
 }
+
+
 
 .info h2 {
     font-size: 24px;
@@ -68,7 +70,7 @@
     margin-bottom: 20px;
     padding: 20px;
     text-align: left;
-    background-color: #A8E9F1;
+    background-color: #256d432a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;

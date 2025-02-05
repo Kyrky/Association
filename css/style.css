@@ -10,6 +10,7 @@
 body {
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
+    background-color: #518cf85d;
 }
 
 a {
@@ -64,6 +65,46 @@ section#Shop:hover~nav a[href="#Shop"] {
 nav a:active {
     background: #94FAB3;
 }
+
+.hero {
+    margin-top: 80px;
+    padding: 4rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #324252, rgba(206, 206, 166, 0.3)),
+                url('../img/bg.png') center/cover;
+    text-align: center;
+}
+
+.underhero {
+    font-size: 25px;
+    color: rgba(223, 231, 231, 0.966);
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        min-height: 50vh;
+    }
+    .underhero {
+        font-size: 17px;
+    }
+    .hero h1 {
+        font-size: 25px;
+    }
+    .hero {
+        margin-top: 0px;
+    }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: rgba(223, 231, 231, 0.966);
+}
+
 
 .footer {
     margin-top: auto; 
@@ -171,7 +212,6 @@ nav a:active {
 
 #Shop {
     text-align: center;
-    background-color: #f9f9f9;
     padding: 2rem 0;
 }
 
@@ -215,9 +255,6 @@ footer {
         font-size: 12px; /* Уменьшение общего размера текста */
     }
 
-    .section-title {
-        font-size: 1.5em; /* Уменьшение размера заголовков секций */
-    }
 
     .text-title {
         font-size: 24px; /* Уменьшение размера заголовков текста */
