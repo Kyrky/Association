@@ -89,13 +89,19 @@ nav a:active {
     }
     .underhero {
         font-size: 17px;
+        margin-right: 31px;
     }
     .hero h1 {
         font-size: 25px;
+        margin-right: 31px;
     }
     .hero {
         margin-top: 0px;
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: +79% center;
     }
+    
 }
 
 .hero h1 {
