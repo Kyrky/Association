@@ -73,7 +73,7 @@ nav a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #607a6691, rgba(206, 206, 166, 0.3)),
+ background: linear-gradient(45deg, #2c2c2c91, rgba(255, 255, 5, 0.158)),
                 url('../img/bg.png') center/cover;
     text-align: center;
     background-size: 100%;
