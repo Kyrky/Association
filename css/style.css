@@ -66,55 +66,167 @@ nav a:active {
     background: #94FAB3;
 }
 
-
+/* Стили для секции .hero */
 .hero {
-  margin-top: 80px;
-  padding: 4rem 1rem;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(45deg, #324252, rgba(206, 206, 166, 0.3)),
-              url('../img/bg.png') center/cover;
-  text-align: center;
-  background-size: 100%;
-  background-position: -50% center;
-}
-
-.underhero {
-  font-size: 25px;
-  color: rgba(223, 231, 231, 0.966);
-}
-
-@media (max-width: 1000px) {
-  .hero {
-      min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
   }
-  .underhero {
-      font-size: 17px;
-      margin-right: 31px;
-  }
-  .hero h1 {
-      font-size: 25px;
-      margin-right: 31px;
-  }
-  .hero {
-      margin-top: 0px;
-      background-size: 110%;
-      background-repeat: no-repeat;
-      background-position: +79% center;
-  }
-
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  color: rgba(223, 231, 231, 0.966);
-}
   
-
+  .hero .col-left {
+    position: relative;
+    margin-left: 50px;
+    flex-basis: 60%;
+  }
+  
+  .hero .col-left:after {
+    content: "";
+    width: 6px;
+    height: 70%;
+    background: #9abab5;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  
+  .hero .col-left h1 {
+    font-size: 2rem;
+    line-height: 3.75rem;
+    font-weight: 900;
+    color: #9abab5;
+    text-transform: uppercase;
+    padding-bottom: 3.3rem;
+  }
+  
+  /* Стили для текста внутри h1 */
+  .hero .col-left h1 span {
+    color: #1b5b08;
+    font-size: 3.5rem;
+  }
+  
+  /* Стили для логотипа, расположенного справа от текста */
+  .hero .col-left h1 .logo-right {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; /* базовый отступ, для мобильной версии */
+    width: 120px; /* базовая ширина, переопределяется для десктопа */
+    height: auto;
+  }
+  
+  /* Стили для h2 и p */
+  .hero .col-left h2 {
+    font-size: 1.6rem;
+    color: #9abab5;
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+  }
+  
+  .hero .col-left p {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    color: #676767;
+  }
+  
+  .hero .col-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 1.5em;
+    flex-basis: 40%;
+  }
+  
+  .hero .col-right .color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, #9abab5, #455b8c);
+    height: 100%;
+    width: 80%;
+    z-index: -2;
+    border-radius: 1.2rem 0 0 1.2rem;
+    transform: translateX(50%);
+  }
+  
+  .hero .col-right img {
+    width: 100%;
+    margin: 0 auto;
+    transition: 0.5s;
+  }
+  
+  .hero .col-right img:hover {
+    transform: translateX(35px);
+    transition: 0.5s;
+  }
+  
+  /* --- Responsive стили --- */
+  
+  /* Десктоп: увеличенный логотип и отступ от текста */
+  @media only screen and (min-width: 992px) {
+    .hero .col-left h1 .logo-right {
+      width: 360px;     /* увеличенная ширина (примерно в 3 раза больше базовой) */
+      margin-left: 200px; /* отступ справа от текста */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* На мобильных устройствах логотип не отображается */
+    .hero .col-left h1 .logo-right {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    .hero .col-left {
+      flex-basis: 50%;
+    }
+    .hero .col-left h1 span {
+      font-size: 3.2rem;
+    }
+    .hero .col-right {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .hero {
+      margin: 50px 0;
+    }
+    .hero .col-left h1 span {
+      font-size: 2.5rem;
+    }
+    .hero .col-left p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .hero {
+      margin: 20px 0;
+      flex-direction: column-reverse;
+    }
+    .hero .col-left h1 {
+      font-size: 1.2rem;
+      padding-bottom: 1.5rem;
+    }
+    .hero .col-left h1 span {
+      font-size: 2rem;
+    }
+    .hero .col-left p {
+      font-size: 1.1rem;
+    }
+    .hero .col-right {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+  
+  @media only screen and (max-width: 544px) {
+    .hero .col-left h1 span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
 
 .footer {
     margin-top: auto; 
