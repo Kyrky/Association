@@ -18,9 +18,6 @@ a {
     color: #ffffff;
 }
 
-a:hover {
-    color: #1e5072;
-}
 
 section {
     position: relative;
@@ -65,122 +62,91 @@ section#Shop:hover~nav a[href="#Shop"] {
 nav a:active {
     background: #94FAB3;
 }
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #f1f8e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
- 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px 0;
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: #455b8c;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.header-content h2 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.cta {
+  display: inline-block;
+  position: relative;
+  background: #1b5b08;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #1b5b08, #155307, #1b5b08);
+  opacity: 0;
+  transition: opacity 5s ease;
+  z-index: -1;
+}
+
+
+
+.cta:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 3rem;
   }
-  
-  .hero .col-left {
-    position: relative;
-    margin-left: 50px;
-    flex-basis: 60%;
-  }
-  
-  .hero .col-left:after {
-    content: "";
-    width: 6px;
-    height: 100%;
-    background: #9abab5;
-    position: absolute;
-    left: -40px;
-    top: 8px;
-  }
-  
-  .hero .col-left h1 {
+  .header-content h2 {
     font-size: 2rem;
-    line-height: 3.75rem;
-    font-weight: 900;
-    color: #9abab5;
-    text-transform: uppercase;
-    padding-bottom: 3.3rem;
   }
-  
-  
-  .hero .col-left h1 span {
-    color: #1b5b08;
-    font-size: 3.5rem;
+  .header-content p {
+    font-size: 1.2rem;
   }
-  
-  
-  .hero .col-left h1 .logo-right {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 10px; 
-    width: 120px; 
-    height: auto;
-  }
-  
+}
 
-  .hero .col-left h2 {
-    font-size: 1.6rem;
-    color: #9abab5;
-    text-transform: uppercase;
-    padding-top: 1.5rem;
-    width: 90%;
-  }
-  
-  .hero .col-left p {
-    font-size: 1.5rem;
-    color: #676767;
-    width: 90%;
-  }
-  
-  .hero .col-right {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0 1.5em;
-    flex-basis: 40%;
-  }
-  
-  .hero .col-right .color-box {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: linear-gradient(to right, #9abab5, #455b8c);
-    height: 100%;
-    width: 80%;
-    z-index: -2;
-    border-radius: 1.2rem 0 0 1.2rem;
-    transform: translateX(50%);
-  }
-  
-  .hero .col-right img {
-    width: 100%;
-    margin: 0 auto;
-    transition: 0.5s;
-  }
-  
-  .hero .col-right img:hover {
-    transform: translateX(35px);
-    transition: 0.5s;
-  }
-  
-  @media (max-width: 1000px) {
-    .hero .col-right {
-      overflow: hidden;
-    }
-    .hero .col-right img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      transition: transform 0.5s;
-    }
-    .hero .col-right img:hover {
-      transform: translateX(35px);
-    }
-  }
-  
-  @media (max-width: 1000px) and (hover: none) {
-    .hero .col-right img:hover {
-      transform: none;
-    }
-  }
-  
   
   
 
