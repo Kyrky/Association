@@ -66,7 +66,7 @@ nav a:active {
     background: #94FAB3;
 }
 
-/* Стили для секции .hero */
+ 
 .hero {
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ nav a:active {
   .hero .col-left:after {
     content: "";
     width: 6px;
-    height: 70%;
+    height: 100%;
     background: #9abab5;
     position: absolute;
     left: -40px;
@@ -99,33 +99,34 @@ nav a:active {
     padding-bottom: 3.3rem;
   }
   
-  /* Стили для текста внутри h1 */
+  
   .hero .col-left h1 span {
     color: #1b5b08;
     font-size: 3.5rem;
   }
   
-  /* Стили для логотипа, расположенного справа от текста */
+  
   .hero .col-left h1 .logo-right {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 10px; /* базовый отступ, для мобильной версии */
-    width: 120px; /* базовая ширина, переопределяется для десктопа */
+    margin-left: 10px; 
+    width: 120px; 
     height: auto;
   }
   
-  /* Стили для h2 и p */
+
   .hero .col-left h2 {
     font-size: 1.6rem;
     color: #9abab5;
     text-transform: uppercase;
     padding-top: 1.5rem;
+    width: 90%;
   }
   
   .hero .col-left p {
     font-size: 1.5rem;
-    padding: 1.5rem 0;
     color: #676767;
+    width: 90%;
   }
   
   .hero .col-right {
@@ -159,18 +160,16 @@ nav a:active {
     transition: 0.5s;
   }
   
-  /* --- Responsive стили --- */
   
-  /* Десктоп: увеличенный логотип и отступ от текста */
+
   @media only screen and (min-width: 992px) {
     .hero .col-left h1 .logo-right {
-      width: 360px;     /* увеличенная ширина (примерно в 3 раза больше базовой) */
-      margin-left: 200px; /* отступ справа от текста */
+      width: 360px;    
+      margin-left: 200px; 
     }
   }
   
   @media only screen and (max-width: 768px) {
-    /* На мобильных устройствах логотип не отображается */
     .hero .col-left h1 .logo-right {
       display: none;
     }
@@ -185,6 +184,9 @@ nav a:active {
     }
     .hero .col-right {
       flex-basis: 50%;
+    }
+    .hero .col-right p {
+      font-size: 1.2rem;
     }
   }
   
@@ -211,9 +213,6 @@ nav a:active {
     }
     .hero .col-left h1 span {
       font-size: 2rem;
-    }
-    .hero .col-left p {
-      font-size: 1.1rem;
     }
     .hero .col-right {
       margin: 0 0 1.5rem 0;
@@ -337,7 +336,7 @@ nav a:active {
     padding: 2rem 0;
 }
 
-/* Стили для футера */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -374,29 +373,29 @@ footer {
 
 @media screen and (max-width: 750px) {
     body {
-        font-size: 12px; /* Уменьшение общего размера текста */
+        font-size: 12px; 
     }
 
 
     .text-title {
-        font-size: 24px; /* Уменьшение размера заголовков текста */
+        font-size: 24px; 
     }
 
     .text-aboutUs,
     .info p,
     .details ul li {
-        font-size: 18px; /* Уменьшение размера текста */
+        font-size: 18px; 
     }
 
     .profile img {
-        width: 215px; /* Уменьшение размера изображения */
+        width: 215px; 
         margin-bottom: 77px;
     }
 }
 
 @media screen and (max-width: 999px) {
     nav {
-        display: none; /* Скрыть меню */
+        display: none; 
     }
     .intro {
         display: none;
@@ -410,7 +409,6 @@ footer {
 }
 
 
-/* Стили для модальных окон */
 .modal {
     display: none; 
     position: fixed; 

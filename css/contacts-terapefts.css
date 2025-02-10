@@ -1,211 +1,141 @@
-.contacts-list {
-    list-style-type: none; 
-    padding: 0; 
+
+  .search-container {
+    position: relative;
     text-align: center;
-}
-
-.contacts-list li {
-    font-size: 20px;
-    margin-bottom: 10px; 
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+    border: 2px solid rgba(30,80,114,0.8);
+    border-radius: 4px;
     width: 100%;
-}
-
-.copyable:hover {
-    color: #1e5072;
-    cursor: pointer; 
-}
-
-.section-title {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 10px 15px;
     background: #1e5072;
     color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-}
-
-.block {
-    width: 100%;
-    color: #fff;
-    background-color: #7c9c96;
-}
-
-table {
-    width: 80%;
-    margin: 50px auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: 20px;
-}
-
-th {
-    background-color: rgb(22, 28, 59);
-    color: white;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-a {
     text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-}
-
-@media screen and (max-width: 750px) {
-    .contacts-list li {
-        font-size: 12px; /* Уменьшение размера текста контактов */
-    }
-
-    .section-title {
-        font-size: 1.5em; /* Уменьшение размера заголовка секции */
-    }
-
-    table {
-        width: 100%; /* Ширина таблицы занимает 100% ширины экрана */
-        overflow-x: auto; /* Горизонтальная прокрутка при необходимости */
-    }
-
-    th, td {
-        white-space: nowrap; /* Предотвращение переноса содержимого ячеек */
-        font-size: 12px;
-        }
-
-    .search-container {
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-input {
-        padding: 10px;
-        width: 80%; /* Ширина поискового поля */
-        font-size: 16px;
-        margin-bottom: 10px; /* Отступ снизу для поисковой строки */
-    }
-
-    .search-button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .table-container {
-        margin-top: 20px; /* Увеличим отступ сверху для поисковой строки */
-    }
-}
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin: 20px auto; /* Уменьшение отступа от таблички */
-    max-width: 100%; /* Таблица будет занимать всю доступную ширину */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.table-scrollable {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    overflow-y: auto;
-    max-height: 400px; /* Высота таблицы для прокрутки */
-}
-
-.table-scrollable th, .table-scrollable td {
-    padding: 10px; /* Уменьшение отступов в ячейках */
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
     font-size: 16px;
-}
-
-.table-scrollable th {
-    background-color: rgb(22, 28, 59);
-    color: white;
-    padding: 10px; /* Уменьшение отступов в заголовках */
-}
-
-.table-scrollable tr:hover {
-    background-color: #f5f5f5;
-}
-
-.table-scrollable a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-}
-
-/* Стили для поисковой строки */
-.search-container {
-    text-align: center;
-    margin-bottom: 20px;
-    position: sticky;
-    top: 50px; /* Отступ от верхней границы, начиная с меню */
-    z-index: 100;
-    background-color: #fff; /* Чтобы поиск не сливался с таблицей */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-input {
+    transition: background 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background: #16403d;
+  }
+  
+  .search-input {
     padding: 10px;
     width: 60%;
     font-size: 16px;
-}
-
-.search-button {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-}
-
-@media screen and (max-width: 750px) {
-    .contacts-list li {
-        font-size: 16px; /* Уменьшение размера текста контактов */
+    border: none;
+    background: #1e5072;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background: #16403d;
+  }
+  
+  .contacts-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  
+  @media screen and (min-width: 1200px) {
+    .contacts-container {
+      grid-template-columns: repeat(5, 1fr);
     }
-
-    .section-title {
-        font-size: 1.5em; /* Уменьшение размера заголовка секции */
-    }
-
-    table {
-        width: 100%; /* Ширина таблицы занимает 100% ширины экрана */
-        overflow-x: auto; /* Горизонтальная прокрутка при необходимости */
-    }
-
-    th, td {
-        white-space: nowrap; /* Предотвращение переноса содержимого ячеек */
-    }
-
+  }
+  
+  .contact-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(240,240,240,0.85));
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: transform 0.2s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .contact-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.6em;
+    color: #333;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .contact-card p {
+    margin: 8px 0;
+    font-size: 1.2em;
+    color: #555;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .contact-label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #1e5072;
+  }
+  
+  .contact-telegram {
+    color: #0088cc;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 750px) {
     .search-container {
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 10px;
+      border: none;
     }
-
+    .home-button {
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      z-index: 101;
+      opacity: 0.8;
+    }
     .search-input {
-        padding: 10px;
-        width: 80%; /* Ширина поискового поля */
-        font-size: 16px;
-        margin-bottom: 10px; /* Отступ снизу для поисковой строки */
+      width: 80%;
+      border: 2px solid #1e5072;
+      border-radius: 4px;
     }
-
+    .contact-card {
+      padding: 20px;
+    }
     .search-button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+        margin-top: 10px;
     }
-
-    .table-container {
-        margin-top: 20px; /* Увеличим отступ сверху для поисковой строки */
-    }
-}
+  }
+  

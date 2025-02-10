@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px auto; /* Центрирование и отступ сверху и снизу */
-    padding: 0 20px; /* Внутренние отступы для блоков */
-    width: 100%; /* Полная ширина блока */
-    box-sizing: border-box; /* Учитываем внутренние отступы и границы в общей ширине */
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .cv-head {
@@ -41,26 +41,23 @@
     margin-top: 30px;
 }
 
-
-
 .info h2 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #1e5072;
-    white-space: normal; /* Текст переносится */
-    overflow: visible; /* Лишний текст видим */
-    text-overflow: clip; /* Без многоточия */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
 }
 
 .info p {
-    font-size: 18px; /* Увеличен размер шрифта */
+    font-size: 18px;
     line-height: 1.6;
     color: #1e5072;
-    word-wrap: break-word; /* Перенос длинных слов */
+    word-wrap: break-word;
 }
 
 .cv-details {
-
     flex-direction: inherit;
     width: 100%;
     max-width: 800px;
@@ -101,53 +98,47 @@
 }
 
 .details-block.show {
-    max-height: 1000px; /* Увеличить это значение, если необходимо для более длинных списков */
+    max-height: 1000px;
     transition: max-height 0.5s ease-in;
 }
 
 .details-toggle {
     cursor: pointer;
-    color: #003366; 
+    color: #003366;
 }
 
-/* Адаптивность для экранов до 1000px */
 @media screen and (max-width: 1000px) {
-
     .cv-details {
-
         flex-direction: column;
-
     }
 
     .info h2 {
-        font-size: 26px; /* Увеличиваем размер шрифта заголовков */
+        font-size: 26px;
     }
 
     .info p {
-        font-size: 20px; /* Увеличиваем размер шрифта параграфов */
+        font-size: 20px;
     }
 
     .details h3 {
-        font-size: 22px; /* Увеличиваем размер шрифта заголовков в деталях */
+        font-size: 22px;
     }
 
     .details ul li {
-        font-size: 18px; /* Увеличиваем размер шрифта элементов списка */
+        font-size: 18px;
     }
 }
 
-/* Адаптивность для экранов до 708px */
 @media screen and (max-width: 708px) {
-
     .info {
         padding: 20px;
     }
 
     .info h2 {
-        font-size: 28px; /* Увеличиваем размер шрифта заголовков */
+        font-size: 28px;
     }
 
     .info p {
-        font-size: 22px; 
+        font-size: 22px;
     }
 }
