@@ -160,6 +160,28 @@ nav a:active {
     transition: 0.5s;
   }
   
+  @media (max-width: 1000px) {
+    .hero .col-right {
+      overflow: hidden;
+    }
+    .hero .col-right img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.5s;
+    }
+    .hero .col-right img:hover {
+      transform: translateX(35px);
+    }
+  }
+  
+  @media (max-width: 1000px) and (hover: none) {
+    .hero .col-right img:hover {
+      transform: none;
+    }
+  }
+  
+  
   
 
   @media only screen and (min-width: 992px) {
