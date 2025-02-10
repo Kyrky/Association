@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/intro.css">
   <link rel="stylesheet" href="css/cv.css">
-  <link rel="stylesheet" href="css/events.css">
   <link rel="stylesheet" href="css/shop.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -20,9 +19,7 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="js/intro.js"></script>
   <script src="js/cv.js"></script>
-  <script src="js/modal.js"></script>
   <script src="js/shop.js"></script>
-  <script src="js/events.js"></script>
 
   <div class="intro">
     <div class="intro-overlay"></div>
@@ -36,10 +33,10 @@
       <section class="hero" id="home">
         <div class="col-left">
           <h1>
-            Знання та досвід <br>
+          <span>Знання та досвід</span>   <br>
             <span>у ваших руках !</span>
-            <img src="img/logo.png" alt="Логотип" class="logo-right">
-          </h1>
+          <!--  <img src="img/logo.png" alt="Логотип" class="logo-right"> -->
+          </h1>     
           <h2>Міжнародна асоціація</h2>
           <p>
             Ми створені для об'єднання фахівців у галузі прикладної кінезіології, намагаємось підвищити рівень знань про відкриття своїх прихованих здібностей та розвиток вже існуючих талантів.
@@ -55,12 +52,7 @@
       </section>
     </header>
     <main class="main">
-      <section id="Events">
-        <h1 class="section-title">Календар подій</h1>
-        <div class="event-list">
-          
-        </div>
-      </section>
+ 
       
       <section id="Founders">
         <h1 class="section-title">Засновники</h1>
@@ -144,54 +136,30 @@
           </div>
           <hr class="section-grid">
         </section>
-        <!-- <section id="FAQ">
-          <h1 class="section-title">Часті запитання</h1>
-        </section> -->
         <section id="Shop">
           <h1 class="section-title">Магазин</h1>
           <div id="shop-content"></div>
         </section>
 
-        <section id="Membership">
-          <h1 class="section-title">Членство в Асоціації</h1>
-          <div class="block">
-            <h2>За членством звертайтесь за контактами.</h2>
-          </div>
-        </section>
         <section id="Contacts">
           <h1 class="section-title">Контакти</h1>
           <div class="block">
             <ul class="contacts-list">
               <li>Телефон: <span class="copyable" data-copiable="+380951935984">+380951935984</span></li>
               <li>Пошта: <span class="copyable" data-copiable="semenaroon@gmail.com">semenaroon@gmail.com</span></li>
+              <h2>Ви можете слідкувати за актуальними подіями у наших соціальних мережах!</h2>
               <li><a href="https://t.me/IAKOfriends"><i class="fab fa-telegram"></i> Telegram</a></li>
               <li><a href="https://www.instagram.com/applied_kinesiology_kiev/"><i class="fab fa-instagram"></i> Instagram</a></li>
               <li><a href="https://www.facebook.com/AppliedKinesio"><i class="fab fa-facebook"></i> Facebook</a></li>
             </ul>
           </div>
         </section>
-        <section id="TableLink">
-          <h1 class="section-title">Контакти терапевтів</h1>
-          <div class="block">
-            <p>Знайдіть терапевта, відсортувавши по місту.</p>
-            <ul class="contacts-list">
-              <li><a href="html/contacts-terapefts.html">Контакти терапевтів</a></li>
-            </ul>
-          </div>
-        </section>
         <nav>
           <a href="#Home">Головна</a>
-          <a href="#Events">Календар подій</a>
           <a href="#AboutUs">Про нас</a>
-          <a href="#Membership">Членство в Асоціації</a>
-          <a href="#TableLink">Контакти терапевтів</a>
-          <a href="#Contacts">Контакти</a>
-          <a href="#FAQ">Часті запитання</a>
-          <a href="#Shop">Магазин</a>
           <a href="#Founders">Засновники</a>
-          <div class="announcement-bar">
-            <p><b>❗️При покупці циклу з 8 занять цілком - <span class="price">120$</span></b></p>
-          </div>
+          <a href="#Shop">Магазин</a>
+          <a href="#Contacts">Контакти</a>
         </nav>
       </main>
       <footer>
