@@ -8,18 +8,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/intro.css">
-  <link rel="stylesheet" href="css/cv.css">
-  <link rel="stylesheet" href="css/shop.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <title>Міжнародна Асоціація Кінезіології та Остеопатії</title>
 </head>
 <body>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="js/intro.js"></script>
-  <script src="js/cv.js"></script>
-  <script src="js/shop.js"></script>
+
+  <script src="js/script.js"></script>
 
   <div class="intro">
     <div class="intro-overlay"></div>
@@ -30,7 +27,6 @@
   </div>
   <div class="content">
     <header class="custom-header">
-      <!-- Inline SVG ClipPath for desktop (if needed) -->
       <svg width="0" height="0" style="position:absolute;">
         <defs>
           <clipPath id="headerClip" clipPathUnits="objectBoundingBox">
@@ -38,93 +34,6 @@
           </clipPath>
         </defs>
       </svg>
-      <style>
-        .custom-header {
-          position: relative;
-          height: 100vh;
-          overflow: hidden;
-          background: #f1f8e9;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 20px;
-        }
-        /* On desktop, apply clip-path to create a curved notch at the bottom */
-        @media (min-width: 769px) {
-          .custom-header {
-            clip-path: url(#headerClip);
-          }
-        }
-        /* On mobile, add extra top padding (approx. 100px more) */
-        @media (max-width: 768px) {
-          .custom-header {
-            padding-top: 120px; /* original 20px + extra 100px */
-          }
-        }
-        .custom-header__bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-        }
-        .custom-header__content {
-          position: relative;
-          z-index: 2;
-          max-width: 800px;
-          color: #455b8c;
-          padding: 20px;
-          animation: customFadeIn 2s ease-in-out;
-        }
-        .custom-header__logo-wrapper {
-          margin-bottom: 20px;
-        }
-        .custom-header__logo {
-          width: 120px;
-          height: 120px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 3px solid #1b5b08;
-        }
-        @media (min-width: 769px) {
-          .custom-header__logo {
-            width: 180px;
-            height: 180px;
-          }
-        }
-        .custom-header__content h1 {
-          font-size: 3rem;
-          margin: 10px 0;
-          line-height: 1.2;
-        }
-        .custom-header__content h2 {
-          font-size: 2rem;
-          margin: 10px 0;
-        }
-        .custom-header__content p {
-          font-size: 1.2rem;
-          margin: 20px 0;
-          line-height: 1.6;
-        }
-        @keyframes customFadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 768px) {
-          .custom-header__content h1 {
-            font-size: 2.5rem;
-          }
-          .custom-header__content h2 {
-            font-size: 1.5rem;
-          }
-          .custom-header__content p {
-            font-size: 1rem;
-          }
-        }
-      </style>
       
       <svg class="custom-header__bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -170,19 +79,11 @@
             Ми створені для об'єднання фахівців у галузі кінезіології, остеопатії, психології та суміжних дисциплін. Підвищуємо рівень знань про відкриття своїх прихованих здібностей та розвиток вже існуючих талантів.
           </p>
         </div>
-        <div class="custom-header__block">
-          <h1>Навчання та семінари</h1>
-          <p>
-            Наша подорож починається з по справжньому глибокого перезавантаження та відновлення всіх внутрішніх систем. Ми позбавимось стрессів, які переслідують нас: у містах, пов'язані з війною, конфліктами, тягнуться з нашого минулого і не дають нам нормально жити.
-          </p>
-        </div>
       </div>
     </header>
     
-    
     <main class="main">
- 
-      
+
       <section id="Founders">
         <h1 class="section-title">Засновники</h1>
         <div class="cv">
@@ -227,35 +128,37 @@
               </div>
             </div>
           </div>
-          <div class="cv">
-            <div class="cv-head">
-              <div class="profile">
-                <img src="img/Kuchik.PNG" alt="Дмитро Кущик">
-                <div class="info">
-                  <h2>Дмитро Кущик</h2>
-                  <p>Реабілітолог, кінезіолог, викладач та співзасновник. Автор програм з роботи з м'язово-фасціальним апаратом та стопою. Основний напрямок — «Функціональна кінезіологія».</p>
-                  <div class="cv-details">
-                    <div class="details">
-                      <h3 class="details-toggle">Освіта:</h3>
-                      <ul class="details-block">
-                        <li>1999–2003 – Національний університет.</li>
-                        <li>2010 – «Основи мануальної терапії».</li>
-                        <li>Прикладна кінезіологія у різних школах.</li>
-                      </ul>
-                    </div>
-                    <div class="details">
-                      <h3 class="details-toggle">Досвід роботи:</h3>
-                      <ul class="details-block">
-                        <li>Кінезіолог – 12 років.</li>
-                        <li>Викладацька діяльність – 8 років.</li>
-                      </ul>
-                    </div>
+        </div>
+        <div class="cv">
+          <div class="cv-head">
+            <div class="profile">
+              <img src="img/Kuchik.PNG" alt="Дмитро Кущик">
+              <div class="info">
+                <h2>Дмитро Кущик</h2>
+                <p>Реабілітолог, кінезіолог, викладач та співзасновник. Автор програм з роботи з м'язово-фасціальним апаратом та стопою. Основний напрямок — «Функціональна кінезіологія».</p>
+                <div class="cv-details">
+                  <div class="details">
+                    <h3 class="details-toggle">Освіта:</h3>
+                    <ul class="details-block">
+                      <li>1999–2003 – Національний університет.</li>
+                      <li>2010 – «Основи мануальної терапії».</li>
+                      <li>Прикладна кінезіологія у різних школах.</li>
+                    </ul>
+                  </div>
+                  <div class="details">
+                    <h3 class="details-toggle">Досвід роботи:</h3>
+                    <ul class="details-block">
+                      <li>Кінезіолог – 12 років.</li>
+                      <li>Викладацька діяльність – 8 років.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
         <section id="AboutUs">
           <h1 class="section-title">Про нас</h1>
           <div class="block">
