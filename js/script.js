@@ -134,7 +134,7 @@ function loadSheetData(sheetName, workbook, container) {
     const priceValue = normalizedItem["PRICE"] || normalizedItem["ЦЕНА"] || normalizedItem["ЦІНА"] || '';
     const price = document.createElement('p');
     price.className = 'shop-card-price';
-    price.textContent = `Ціна: ${priceValue}`;
+    price.textContent = `Ціна: ${priceValue}$`;
     card.appendChild(price);
 
     grid.appendChild(card);
