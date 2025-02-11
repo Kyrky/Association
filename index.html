@@ -51,10 +51,16 @@
           text-align: center;
           padding: 20px;
         }
-        /* Apply clip-path on desktop screens */
+        /* On desktop, apply clip-path to create a curved notch at the bottom */
         @media (min-width: 769px) {
           .custom-header {
             clip-path: url(#headerClip);
+          }
+        }
+        /* On mobile, add extra top padding (approx. 100px more) */
+        @media (max-width: 768px) {
+          .custom-header {
+            padding-top: 120px; /* original 20px + extra 100px */
           }
         }
         .custom-header__bg {
@@ -83,7 +89,6 @@
           object-fit: cover;
           border: 3px solid #1b5b08;
         }
-        /* Enlarge logo on desktop */
         @media (min-width: 769px) {
           .custom-header__logo {
             width: 180px;
@@ -160,9 +165,9 @@
         </div>
         <div class="custom-header__block">
           <h1>Знання та досвід<br>у ваших руках !</h1>
-          <h2>Міжнародна асоціація</h2>
+          <h2>Міжнародна Асоціація Кінезіології та Остеопатії IAKO</h2>
           <p>
-            Ми створені для об'єднання фахівців у галузі прикладної кінезіології, намагаємось підвищити рівень знань про відкриття своїх прихованих здібностей та розвиток вже існуючих талантів.
+            Ми створені для об'єднання фахівців у галузі кінезіології, остеопатії, психології та суміжних дисциплін. Підвищуємо рівень знань про відкриття своїх прихованих здібностей та розвиток вже існуючих талантів.
           </p>
         </div>
         <div class="custom-header__block">
