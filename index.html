@@ -29,33 +29,144 @@
     </div>
   </div>
   <div class="content">
-    <header class="header">
-      <svg class="animated-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <header class="custom-header">
+      <!-- Inline SVG ClipPath: применяется только на десктопе -->
+      <svg width="0" height="0" style="position:absolute;">
         <defs>
-          <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <clipPath id="headerClip" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V0.85 Q0.5,1 0,0.85 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <style>
+        .custom-header {
+          position: relative;
+          height: 100vh;
+          overflow: hidden;
+          background: #f1f8e9;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+        }
+        /* Применяем clip-path только на экранах шире 768px */
+        @media (min-width: 769px) {
+          .custom-header {
+            clip-path: url(#headerClip);
+          }
+        }
+        .custom-header__bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        .custom-header__content {
+          position: relative;
+          z-index: 2;
+          max-width: 800px;
+          color: #455b8c;
+          padding: 20px;
+          animation: customFadeIn 2s ease-in-out;
+        }
+        .custom-header__logo-wrapper {
+          margin-bottom: 20px;
+        }
+        .custom-header__logo {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid #1b5b08;
+        }
+        .custom-header__content h1 {
+          font-size: 3rem;
+          margin: 10px 0;
+          line-height: 1.2;
+        }
+        .custom-header__content h2 {
+          font-size: 2rem;
+          margin: 10px 0;
+        }
+        .custom-header__content p {
+          font-size: 1.2rem;
+          margin: 20px 0;
+          line-height: 1.6;
+        }
+        @keyframes customFadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+          .custom-header__content h1 {
+            font-size: 2.5rem;
+          }
+          .custom-header__content h2 {
+            font-size: 1.5rem;
+          }
+          .custom-header__content p {
+            font-size: 1rem;
+          }
+        }
+      </style>
+      
+      <svg class="custom-header__bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="curveGradientUnique" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#a8e6cf" />
             <stop offset="100%" stop-color="#dcedc1" />
           </linearGradient>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="50" />
+          <filter id="curveBlurUnique">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
           </filter>
         </defs>
-        <circle cx="720" cy="300" r="300" fill="url(#animatedGradient)" filter="url(#blur)">
-          <animate attributeName="r" from="250" to="350" dur="10s" repeatCount="indefinite" />
-        </circle>
-        <rect x="100" y="100" width="200" height="200" fill="url(#animatedGradient)" opacity="0.2" filter="url(#blur)">
-          <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite"/>
-        </rect>
+        <path d="M0,300 C360,150 1080,450 1440,300 L1440,600 L0,600 Z" fill="url(#curveGradientUnique)" opacity="0.4" filter="url(#curveBlurUnique)">
+          <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+            M0,300 C360,150 1080,450 1440,300 L1440,600 L0,600 Z;
+            M0,300 C360,450 1080,150 1440,300 L1440,600 L0,600 Z;
+            M0,300 C360,150 1080,450 1440,300 L1440,600 L0,600 Z
+          "/>
+        </path>
+        <path d="M0,200 C720,100 720,300 1440,200 L1440,600 L0,600 Z" fill="url(#curveGradientUnique)" opacity="0.6" filter="url(#curveBlurUnique)">
+          <animate attributeName="d" dur="15s" repeatCount="indefinite" values="
+            M0,200 C720,100 720,300 1440,200 L1440,600 L0,600 Z;
+            M0,200 C720,300 720,100 1440,200 L1440,600 L0,600 Z;
+            M0,200 C720,100 720,300 1440,200 L1440,600 L0,600 Z
+          "/>
+        </path>
+        <path d="M0,400 C480,350 960,450 1440,400 L1440,600 L0,600 Z" fill="url(#curveGradientUnique)" opacity="0.3" filter="url(#curveBlurUnique)">
+          <animate attributeName="d" dur="18s" repeatCount="indefinite" values="
+            M0,400 C480,350 960,450 1440,400 L1440,600 L0,600 Z;
+            M0,400 C480,450 960,350 1440,400 L1440,600 L0,600 Z;
+            M0,400 C480,350 960,450 1440,400 L1440,600 L0,600 Z
+          "/>
+        </path>
       </svg>
-      <div class="header-content">
-        <h1>Знання та досвід</h1>
-        <h2>У ваших руках!</h2>
-        <p>
-          Ми створені для об'єднання фахівців у галузі прикладної кінезіології. Розкрийте свій потенціал разом з нами.
-        </p>
-        <a href="#AboutUs" class="cta">Дізнатись більше</a>
+      
+      <div class="custom-header__content">
+        <div class="custom-header__logo-wrapper">
+          <img src="img/logo.png" alt="Логотип" class="custom-header__logo">
+        </div>
+        <div class="custom-header__block">
+          <h1>Знання та досвід<br>у ваших руках !</h1>
+          <h2>Міжнародна асоціація</h2>
+          <p>
+            Ми створені для об'єднання фахівців у галузі прикладної кінезіології, намагаємось підвищити рівень знань про відкриття своїх прихованих здібностей та розвиток вже існуючих талантів.
+          </p>
+        </div>
+        <div class="custom-header__block">
+          <h1>Навчання та семінари</h1>
+          <p>
+            Наша подорож починається з по справжньому глибокого перезавантаження та відновлення всіх внутрішніх систем. Ми позбавимось стрессів, які переслідують нас: у містах, пов'язані з війною, конфліктами, тягнуться з нашого минулого і не дають нам нормально жити.
+          </p>
+        </div>
       </div>
     </header>
+    
     
     <main class="main">
  
